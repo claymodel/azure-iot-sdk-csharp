@@ -62,6 +62,7 @@
     <Compile Include="netstandard20\ProvisioningE2ETests.cs" />
     <Compile Include="netstandard20\ProvisioningServiceClientE2ETests.cs" />
     <Compile Include="netstandard20\ProvisioningCertificateValidationE2ETest.cs" />
+    <Compile Include="netstandard20\ReProvisioningE2ETests.cs" />
   </ItemGroup>
 
   <!-- All Platforms -->

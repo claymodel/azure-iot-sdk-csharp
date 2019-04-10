@@ -4,6 +4,7 @@
 using Microsoft.Azure.Devices.Common;
 using Microsoft.Azure.Devices.Provisioning.Security.Samples;
 using Microsoft.Azure.Devices.Provisioning.Service;
+using Microsoft.Azure.Devices.Shared;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -90,7 +91,7 @@ namespace Microsoft.Azure.Devices.E2ETests
         public async Task ProvisioningServiceClient_SymmetricKey_GroupEnrollments_Create_Http_Ok_WithReprovisioningFields()
         {
             //This webhook won't actually work for reprovisioning, but this test is only testing that the field is accepted by the service
-            CustomAllocationDefinition customAllocationDefinition = new CustomAllocationDefinition() { ApiVersion = "2018-11-01", WebhookUrl = "https://www.microsoft.com" };
+            CustomAllocationDefinition customAllocationDefinition = new CustomAllocationDefinition() { ApiVersion = "2019-04-10", WebhookUrl = "https://www.microsoft.com" };
             ReprovisionPolicy reprovisionPolicy = new ReprovisionPolicy() { MigrateDeviceData = false, UpdateHubAssignment = true };
             AllocationPolicy allocationPolicy = AllocationPolicy.GeoLatency;
 
@@ -101,7 +102,7 @@ namespace Microsoft.Azure.Devices.E2ETests
         public async Task ProvisioningServiceClient_SymmetricKey_IndividualEnrollment_Create_Http_Ok_WithReprovisioningFields()
         {
             //This webhook won't actually work for reprovisioning, but this test is only testing that the field is accepted by the service
-            CustomAllocationDefinition customAllocationDefinition = new CustomAllocationDefinition() { ApiVersion = "2018-11-01", WebhookUrl = "https://www.microsoft.com" };
+            CustomAllocationDefinition customAllocationDefinition = new CustomAllocationDefinition() { ApiVersion = "2019-04-10", WebhookUrl = "https://www.microsoft.com" };
             ReprovisionPolicy reprovisionPolicy = new ReprovisionPolicy() { MigrateDeviceData = false, UpdateHubAssignment = true };
             AllocationPolicy allocationPolicy = AllocationPolicy.GeoLatency;
 
